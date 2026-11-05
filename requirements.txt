@@ -1,0 +1,58 @@
+# ============================================================
+# OSMF training dependencies (CUDA 11.8, Python 3.8/3.9)
+# ------------------------------------------------------------
+# Install PyTorch first (CUDA 11.8 build):
+#   pip install torch==2.0.1 torchvision==0.15.2
+# Then:
+#   pip install -r requirements.txt
+# ============================================================
+
+# --- Core deep learning ---
+torch==2.0.1
+torchvision==0.15.2
+
+# --- Transformers / training stack ---
+transformers==4.38.1
+accelerate==0.34.2          # training requires 0.34.2 (upgraded by the entry script)
+peft==0.4.0
+bitsandbytes==0.41.0
+flash-attn==1.0.4
+deepspeed==0.9.5
+datasets
+sentencepiece==0.1.99
+
+# --- Numerical / ML utils ---
+numpy==1.24.4
+scikit-learn==1.2.2
+fairscale==0.4.4
+einops==0.6.1
+einops-exts==0.0.4
+timm==0.6.13
+
+# --- Vision (headless; do NOT install opencv-python) ---
+opencv-python-headless
+
+# --- Serving / UI ---
+gradio==3.35.2
+gradio_client==0.2.9
+uvicorn
+fastapi
+requests
+httpx==0.24.0
+
+# --- LLM / API ---
+openai==1.54.3
+
+# --- Misc utilities ---
+markdown2[all]
+shortuuid
+omegaconf
+ruamel_yaml
+iopath
+webdataset
+wandb
+nltk
+decord
+jsonlines
+jmespath
+pygsheets
